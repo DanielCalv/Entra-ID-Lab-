@@ -26,7 +26,7 @@ For each record, the script:
 (6) Assigns the department and job title attributes 
 (7) Enables the account and then assigns a temporary password 
 
-The complete script is here:  
+The complete script is here: [View the Create-EntraUsers.ps1 script](../scripts/Create-EntraUsers.ps1)
 
 The script is heavily commented to explain the purpose of each section.
 
