@@ -38,7 +38,7 @@ Figure 2 - Verification of 20 users imported from CSV
 ![Verification of Users](../screenshots/02-Verification-users-CSV.png)
 
 Figure 3 - Example Entra ID user and attributes 
-![Verification of Entra ID success](../screenshots/03-Verification-Entra-Id-user.png)
+![Verification of Entra ID success](../screenshots/03-Verification-Entra-ID-user.png)
 
 # 3. Group Management
 
