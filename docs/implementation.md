@@ -33,11 +33,11 @@ The script is heavily commented to explain the purpose of each section.
 ## 2.5. Evidence 
 Figure 1 - User provisioning CSV dataset 
 ![CSV dataset](../screenshots/01-users-csv.png)
+
 Figure 2 - Verification of 20 users imported from CSV
 
-Figure 3 - PowerShell showing users created 
 
-Figure 4 - Example Entra ID user and attributes 
+Figure 3 - Example Entra ID user and attributes 
 
 # 3. Group Management
 
