@@ -30,6 +30,15 @@ The complete script is here:
 
 The script is heavily commented to explain the purpose of each section.
 
+## 2.5. Evidence 
+Figure 1 - User provisioning CSV dataset 
+
+Figure 2 - Verification of 20 users imported from CSV
+
+Figure 3 - PowerShell showing users created 
+
+Figure 4 - Example Entra ID user and attributes 
+
 # 3. Group Management
 
 # 4. Role-Based Access Control
