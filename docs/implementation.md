@@ -35,9 +35,10 @@ Figure 1 - User provisioning CSV dataset
 ![CSV dataset](../screenshots/01-users-csv.png)
 
 Figure 2 - Verification of 20 users imported from CSV
-
+![Verification of Users](../screenshots/02-Verification-users-CSV.png)
 
 Figure 3 - Example Entra ID user and attributes 
+![Verification of Entra ID success](../screenshots/03-Verification-Entra-Id-user.png)
 
 # 3. Group Management
 
