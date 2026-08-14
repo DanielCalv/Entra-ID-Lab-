@@ -28,8 +28,6 @@ For each record, the script:
 
 The complete script is here: [View the Create-EntraUsers.ps1 script](../scripts/Create-EntraUsers.ps1)
 
-The script is heavily commented to explain the purpose of each section.
-
 ## 2.5. Evidence 
 Figure 1 - User provisioning CSV dataset 
 ![CSV dataset](../screenshots/01-users-csv.png)
@@ -41,6 +39,32 @@ Figure 3 - Example Entra ID user and attributes
 ![Verification of Entra ID success](../screenshots/03-Verification-Entra-ID-user.png)
 
 # 3. Group Management
+## 3.1. Objective
+The objective of this stage was to organise the users just created into groups based on the department they are assigned to. For this project, eight security groups were created, with an additional group for managers.
+
+## 3.2. Group structure 
+The following security groups were created: IT-Users, Finance-Users, HR-Users, Sales-Users, Marketing-Users, Development-Users, Operations-Users and Managers. 
+
+## 3.3. Group creation 
+The groups were created as Microsoft Entra security groups rather than Microsoft 365 groups. Security groups were selected as the main purpose of this lab is to manage identity and access rather than provide collaboration features. 
+
+The complete script for creating groups is here: [View the Create-EntraGroups.ps1 script](../scripts/Create-EntraGroups.ps1)
+
+## 3.4. PowerShell implementation for assigning users to groups 
+The group membership process was automated using the Microsoft Graph PowerShell SDK. 
+
+For each user in the CSV, the script:
+(1) Reads the department the user is part of 
+(2) Uses the hashtable (described below) to determine the security group name 
+(3) Finds the corresponding group in Microsoft Entra ID
+(4) Finds the corresponding user using their User Principal Name 
+(5) Gets the existing members of the department group
+(6) Checks whether the user is already a member 
+(7) Adds the user to the group if not 
+
+The PowerShell script uses a hashtable to map the department valuers in the csv file to the corresponding security group names in Microsoft Entra ID. This approach was used as the department name does not always directly match the group name e.g. for HR group. 
+
+The complete script for assigning the users to groups is here: [View the Assign-UsersToGroups.ps1 script](../scripts/Assign-UsersToGroups.ps1)
 
 # 4. Role-Based Access Control
 
