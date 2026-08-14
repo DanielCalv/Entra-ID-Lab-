@@ -42,7 +42,7 @@ Figure 3 - Example Entra ID user and attributes
 ## 3.1. Objective
 The objective of this stage was to organise the users just created into groups based on the department they are assigned to. For this project, eight security groups were created, with an additional group for managers.
 
-I also created two additional administrative groups: IT-Admins and Security-Admins. These groups will be used to demonstrate RBAC, as outlined in the next section. 
+I also created two additional administrative groups: IT-Admins and Security-Admins. These groups will be used to demonstrate RBAC, as outlined in the next section. As 'James Carter' is IT Manager he has been assigned to IT-Admins group alongside 'Sarah Mitchell', while 'Emily Wilson' has been assigned to Security-Admins.
 
 ## 3.2. Group structure 
 The following security groups were created: IT-Users, Finance-Users, HR-Users, Sales-Users, Marketing-Users, Development-Users, Operations-Users and Managers. 
