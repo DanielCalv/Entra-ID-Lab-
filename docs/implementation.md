@@ -42,13 +42,17 @@ Figure 3 - Example Entra ID user and attributes
 ## 3.1. Objective
 The objective of this stage was to organise the users just created into groups based on the department they are assigned to. For this project, eight security groups were created, with an additional group for managers.
 
+I also created two additional administrative groups: IT-Admins and Security-Admins. These groups will be used to demonstrate RBAC, as outlined in the next section. 
+
 ## 3.2. Group structure 
 The following security groups were created: IT-Users, Finance-Users, HR-Users, Sales-Users, Marketing-Users, Development-Users, Operations-Users and Managers. 
 
 ## 3.3. Group creation 
-The groups were created as Microsoft Entra security groups rather than Microsoft 365 groups. Security groups were selected as the main purpose of this lab is to manage identity and access rather than provide collaboration features. 
+The security groups were created as Microsoft Entra security groups rather than Microsoft 365 groups. Security groups were selected as the main purpose of this lab is to manage identity and access rather than provide collaboration features. 
 
 The complete script for creating groups is here: [View the Create-EntraGroups.ps1 script](../scripts/Create-EntraGroups.ps1)
+
+To demonstrate the different approaches to Entra ID administration, the administrative groups (IT-Admins and Security-Admins) were created manually through the Microsoft Entra admin centre rather than through PowerShell. 
 
 ## 3.4. PowerShell implementation for assigning users to groups 
 The group membership process was automated using the Microsoft Graph PowerShell SDK. 
