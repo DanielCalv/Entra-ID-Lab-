@@ -5,7 +5,7 @@ Connect-MgGraph -Scopes "User.ReadWrite.All"
 $users = Import-Csv "C:\Users\daniel\OneDrive - Pendle Connections Ltd\Lboro\Pendle\Entra ID\users.csv"
 
 # Entra tenant domain
-$domain = "digisolutionscustomers.onmicrosoft.com"
+$domain = "digisolutionsuk.onmicrosoft.com"
 
 # Temporary password
 $password = "TempPassword123!"
@@ -31,21 +31,22 @@ foreach ($user in $users) {
 
     # Create the user
     try {
-        New-MgUser `
-            -DisplayName $displayName `
-            -UserPrincipalName $userPrincipalName `
-            -AccountEnabled `
-            -MailNickname $mailNickname `
-            -PasswordProfile @{
-                Password = $password
-                ForceChangePasswordNextSignIn = $true
-            } `
-            -Department $user.Department `
-            -JobTitle $user.JobTitle
+    New-MgUser `
+        -DisplayName $displayName `
+        -UserPrincipalName $userPrincipalName `
+        -AccountEnabled `
+        -MailNickname $mailNickname `
+        -PasswordProfile @{
+            Password = $password
+            ForceChangePasswordNextSignIn = $true
+        } `
+        -Department $user.Department `
+        -JobTitle $user.JobTitle `
+        -ErrorAction Stop
 
-        Write-Host "User created successfully: $displayName" -ForegroundColor Green
-    }
-    catch {
-        Write-Host "Failed to create $displayName : $($_.Exception.Message)" -ForegroundColor Red
-    }
+    Write-Host "User created successfully: $displayName" -ForegroundColor Green
+}
+catch {
+    Write-Host "Failed to create $displayName" -ForegroundColor Red
+}
 }

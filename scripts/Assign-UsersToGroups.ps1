@@ -29,7 +29,7 @@ foreach ($user in $users) {
     	# Find the group in Microsoft Entra ID
     	$departmentGroup = Get-MgGroup -Filter "displayName eq '$departmentGroupName'"
 
-	$userPrincipalName = "$($user.FirstName).$($user.LastName)@digisolutionscustomers.onmicrosoft.com".ToLower()
+	$userPrincipalName = "$($user.FirstName).$($user.LastName)@digisolutionsuk.onmicrosoft.com".ToLower()
 	$entraUser = Get-MgUser -UserId $userPrincipalName
 	
 	# Get the current members of the department group
@@ -65,10 +65,9 @@ foreach ($user in $users) {
 			Write-Host "User already in manager group, skipping.." -ForegroundColor Yellow
 		}
 		else {
-
     			# Add the user to the Managers group
     			New-MgGroupMember -GroupId $managerGroup.Id -DirectoryObjectId $entraUser.Id
-			Write-Host "Adding user to group.." -ForegroundColor Yellow
+			Write-Host "Adding user to Managers group.." -ForegroundColor Yellow
 		}
 	}
 
