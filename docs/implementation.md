@@ -70,6 +70,17 @@ The PowerShell script uses a hashtable to map the department valuers in the csv 
 
 The complete script for assigning the users to groups is here: [View the Assign-UsersToGroups.ps1 script](../scripts/Assign-UsersToGroups.ps1)
 
+## 3.5. Evidence 
+
+Figure 1 - Verification of group creation
+![Group creation](../screenshots/04-Verification-of-group-creation.png)
+
+Figure 2 - Verification of groups on Entra ID
+![Verification of Entra ID success](../screenshots/05-Verification-groups.png)
+
+Figure 3 - Verification of manager group creation
+![Verification of manager group](../screenshots/06-Verification-manager-group.png)
+
 # 4. Role-Based Access Control
 
 # 5. Authentication
