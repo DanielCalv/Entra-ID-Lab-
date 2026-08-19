@@ -83,7 +83,49 @@ Figure 3 - Verification of manager group creation
 
 # 4. Role-Based Access Control
 
+## 4.1. Objective 
+The objective of this stage was to implement RBAC in Microsoft Entra ID to provide users with administrative permissions based on their responsibilities. Rather than assigning administrative roles directly to individual users, role assignable security grousp were used instead. 
+
+Two administrative groups were created: IT-Admin and Security-Admin. 
+
+## 4.2. RBAC Structure 
+As stated before I created two administrative groups, IT-Admin and Security-Admin. The IT-Admin group has been given two permissions; User Administration and Groups Administration. The Security-Admin group has been given the single permission Security Administrator. 
+
+## 4.3. User Administrator Testing 
+The User Administrator role was tested to verify that members of the IT-Admin group could manage user accounts. The test was performed using James Carter, who is a member of the IT-Admin group. 
+
+James was used to modify the properties of Florence Wright's account. her job title was changed from Operations Executive to Operations Manager. Below is evidence of this change
+
+![Change to Florence Wright's account](../screenshots/10-User-Admin-Check.png)
+
+## 4.4. Groups Administrator Testing 
+The Groups Administrator role was tested to verify that members of IT-Admin could manage groups. The test was again performed using James Carter. 
+
+James was used to create a temporary group called RBAC-Test. Below is evidence of this creation
+
+![RBAC group creation](../screenshots/11-Group-Admin-Check.png)
+
+## 4.5. Least Privilege Testing 
+A standard user was tested to confirm that users without administrative roles could not perform privileged group management operations. Florence Wright was used as the standard user. She is currently a member of the Operations-Users group and has no Microsoft Entra directory roles assigned. 
+
+Florence attempted to manage the existing Operations-users group. As evident from the screenshot below, Florence is unable to make any administrative changes, including deleting the group. This is shown by the delete group button being greyed out. 
+
+![Least Privilege](../screenshots/12-Florence.png)
+
+## 4.6. Password Reset Testing 
+The User Administration role was further tested by demonstrating the ability to reset another user's password. James Carter was again used to access Florence Wright's user account and selected the Reset password button. This caused the password reset to be successfully initiated. 
+
 # 5. Authentication
+
+## 5.1. Objective 
+
+## 5.2. Authentication Configuration 
+
+## 5.3. MFA
+
+## 5.4. Password Authentication
+
+## 5.5. SSPR 
 
 # 6. Conditional Access
 
