@@ -121,7 +121,7 @@ The User Administration role was further tested by demonstrating the ability to 
 The objective of this stage was to provide secure methods for users to verify their identity when accessing resources. Microsoft Entra ID authentication methods were configured to support password based authentication, MFA, and SSPR. 
 
 ## 5.2. Authentication Configuration 
-Microsoft Entra authentication methods were reviewed and configured using the Authentication methods policy. Microsoft Authenticator was enabled as the primary authentication method for users. 
+Microsoft Entra authentication methods were reviewed and configured using the Authentication methods policy. Microsoft Authenticator was enabled as the primary authentication method for users. The screenshot below shows the authentication methods policy being enabled. 
 
 ![Authenticator Method](../screenshots/13-Authenticator-Method.png)
 
@@ -130,12 +130,16 @@ Multi-factor authentication was configured using Microsoft Authenticator. MFA pr
 
 Microsoft Authenticator was selected as the primary MFA method due to its support for push notifications and one-time passcodes. This set up was tested using one of the users created earlier. 
 
-The registered authentication method was tested by signing in to the account and completing the additional verification request through Microsoft Authenticator. The authentication request was successfully approved, demonstrating that the MFA method is working correctly and as expected. 
+The registered authentication method was tested by signing in to the account and completing the additional verification request through Microsoft Authenticator. The authentication request was successfully approved, demonstrating that the MFA method is working correctly and as expected. The screenshot below shows the successful set up for the user Charlie Harris. 
+
+![MFA success](../screenshots/14-MFA.png)
 
 ## 5.4. Password Authentication
 Password authentication is used as the primary authentication factor for Microsoft Entra ID users. Users were given a temporary password when their accounts were created. 
 
-Within the code, when creating the users, there was a line: ForceChangePasswordNextSignIn = True. This line means the users are required to change their password during the first sign in. 
+Within the code, when creating the users, there was a line: ForceChangePasswordNextSignIn = True. This line means the users are required to change their password during the first sign in. The screenshot below shows the page users are given when they first try to log into their account.
+
+![New password page](../screenshots/15-Password-Authentication.png)
 
 ## 5.5. SSPR 
 
