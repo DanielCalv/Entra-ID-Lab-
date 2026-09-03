@@ -149,6 +149,34 @@ SSPR was configured through the Microsoft Entra admin centre. The following sett
 
 # 6. Conditional Access
 
-# 7. Enterprise Applications
+## 6.1. Objective 
+The objective of this stage was to implement Conditional Access policies to control access to organisational resources based on security requirements. Conditional access was implemented to provide an additional layer of access control after authentication. 
 
-# 8. Monitoring
+## 6.2. Block Legacy Authentication
+The policy I implemented was a Block Legacy Authentication. This was created to prevent the use of legacy authentication protocols. The policy was initially configured in Report-Only mode to allow its effects to be evaluated without immediately blocking users. 
+
+To test this policy, a normal browser sign in was performed using modern authentication. The sign in logs were reviewed to verify the authentication methods. An actual blocked legacy authentication was not performed because this would require configuring an older client or protocol that actually uses legacy authentication. 
+
+# 7. Monitoring
+
+## 7.1. Objective 
+The objective of this stage was to implement monitoring of activity within the Microsoft Entra ID environment. Monitoring provides visibility into user authentication, administrative changes and Conditional Access decisions. 
+
+Microsoft Entra ID provides activity logs that can be used to monitor and troubleshoot activity within the tenant. The main logs used in this project were Sign-in Logs and Audit Logs.
+
+## 7.2. Sign-in Logs 
+Microsoft Entra sign-in logs were used to monitor user authentication activity within the environment. A test user was used to generate an interactive sign-in. The resulting event was located in the Interactive user sign-ins section. 
+
+The sign in event was examined to identify information such as; User who performed the sign in, date and time, application accessed and authentication method. The sign in was recorded as successful, demonstrating that Microsoft Entra was recording authentication activity for users within the tenant. 
+
+![Sign in Logs](../screenshots/16-Sign-in-logs.png)
+
+## 7.3. Audit-Logs 
+Audit logs were used to monitor administrative changes made within the Microsoft Entra tenant. Audit logs provide a record of changes made to the directory, including changes involving users, groups and roles and policies. 
+
+The example log below shows the audit made when I created a new group to test the conditional access. The one highlighted shows the successful addition of one of the test users to this group.
+
+![Audit Logs](../screenshots/16-Audit-logs.png)
+
+
+An audit event generated during the implementation of the lab was used as an example. 
