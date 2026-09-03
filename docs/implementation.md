@@ -142,7 +142,10 @@ Within the code, when creating the users, there was a line: ForceChangePasswordN
 ![New password page](../screenshots/15-Password-Authentication.png)
 
 ## 5.5. SSPR 
-
+SSPR was configured through the Microsoft Entra admin centre. The following settings were configured:
+(1) SSPR enabled for users 
+(2) Authentication methods configured for password recovery 
+(3) Users required to register theit authentication information
 
 # 6. Conditional Access
 
