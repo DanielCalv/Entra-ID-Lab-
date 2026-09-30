@@ -176,7 +176,7 @@ Audit logs were used to monitor administrative changes made within the Microsoft
 
 The example log below shows the audit made when I created a new group to test the conditional access. The one highlighted shows the successful addition of one of the test users to this group.
 
-![Audit Logs](../screenshots/16-Audit-logs.png)
+![Audit Logs](../screenshots/17-Audit-logs.png)
 
 
 An audit event generated during the implementation of the lab was used as an example. 
